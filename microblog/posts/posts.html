@@ -25,6 +25,7 @@
   <body>
     <header></header>
 
+    <button id="logoutButton">logout</button>
     <main>
       <h1>Posts</h1>
     </main>
@@ -33,5 +34,11 @@
 
     <!-- Page-specific code -->
     <script src="posts.js"></script>
+
+    <script>
+      document.getElementById("logoutButton").addEventListener("click", function () {
+        logout();
+      });
+    </script>
   </body>
 </html>
