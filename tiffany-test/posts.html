@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MySpace Dupe - Posts</title>
+    <link rel="stylesheet" href="/styles/posts.css" />
+  </head>
+  <body>
+    <h1>Posts</h1>
+    <button onclick="logout()">Logout</button>
+    <form id="postForm">
+      <textarea id="postContent" placeholder="What's happening?" required></textarea>
+      <button type="submit">Post</button>
+    </form>
+    <div id="timeline"></div>
+    <script src="/scripts/auth.js"></script>
+    <script src="/scripts/posts.js"></script>
+    <script>
+      document.getElementById("postForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const content = document.getElementById("postContent").value;
+        createPost(content);
+        document.getElementById("postForm").reset();
+      });
+      window.onload = fetchPosts;
+    </script>
+  </body>
+</html>

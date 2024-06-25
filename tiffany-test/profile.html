@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MySpace Dupe - Profile</title>
+    <link rel="stylesheet" href="/styles/profile.css" />
+  </head>
+  <body>
+    <h1>Profile</h1>
+    <button onclick="logout()">Logout</button>
+    <div id="profileInfo"></div>
+    <div id="userPosts"></div>
+    <script src="/scripts/auth.js"></script>
+    <script src="/scripts/profile.js"></script>
+    <script>
+      const userId = new URLSearchParams(window.location.search).get("userId");
+      window.onload = () => fetchUserProfile(userId);
+    </script>
+  </body>
+</html>
