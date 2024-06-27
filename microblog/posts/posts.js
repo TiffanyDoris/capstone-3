@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   logoutButton.addEventListener("click", function () {
     logout();
+      window.location.replace("../account/login.html");
   });
 
   fetch(`${apiBaseURL}/api/posts`, {
@@ -44,3 +45,4 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error fetching posts:", error);
     });
 });
+const postContent = document.querySelector("#postContent");
