@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="global.css" />
-
-    <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="index.css" />
-
-    <title>Login to the Microblog Network!</title>
+    <title>Register</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="../global.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        background-color: purple;
+        padding: 1rem;
+        color: white;
+        text-align: center;
+      }
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+      }
+      .container {
+        margin-top: 2rem;
+        text-align: center;
+      }
+      .card {
+        background-color: #add8e6; /* Light blue color */
+        padding: 2rem;
+        border-radius: 10px;
+        margin: 2rem auto;
+        max-width: 500px;
+      }
+      .card-title {
+        margin-bottom: 1rem;
+        color: purple;
+      }
+      .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      .form-control {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+      }
+      .btn-primary {
+        background-color: purple;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+      }
+      .btn-primary:hover {
+        opacity: 0.8;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .mt-3 {
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav>
-        
-      </nav>
+      <div class="navbar">
+        <a class="navbar-brand" href="#">Microblog</a>
+        <a href="login.html">Login</a>
+      </div>
     </header>
-
-    <main>
-      <h1>Register</h1>
+    <main class="container">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">Register</h1>
+          <form id="register">
+            <div>
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="fullName" required />
+            </div>
+            <div>
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" minlength="3" required />
+            </div>
+            <div>
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" minlength="6" required />
+            </div>
+            <hr />
+            <div>
+              <p>
+                By creating an account you agree to our
+                <a href="#">Terms & Privacy</a>.
+              </p>
+              <button type="submit" class="btn-primary" id="registerButton">Register</button>
+            </div>
+          </form>
+          <div class="text-center mt-3">
+            <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+          </div>
+        </div>
+      </div>
     </main>
-
     <footer></footer>
-
-   
+    <script src="register.js"></script>
   </body>
 </html>
