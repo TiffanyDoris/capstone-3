@@ -11,6 +11,15 @@
     />
     <link rel="stylesheet" href="../global.css" />
     <title>Create Post</title>
+    <style>
+      body {
+      background: url('/images/4.webp') no-repeat center center/cover; }
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    </style>
     <script src="../account/auth.js"></script>
     <script>
       if (!isLoggedIn()) {
@@ -21,7 +30,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Microblog</a>
+        <a class="navbar-brand" href="#">Friend Zone</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -65,34 +74,34 @@
     </main>
 
     <footer class="text-center mt-5 py-3">
-      <p>&copy; 2024 Microblog. All rights reserved.</p>
+      <p>&copy; 2024 Friend Zone. All rights reserved.</p>
     </footer>
 
     <script src="create-post.js"></script>
     <script>
-      document.getElementById('logoutButton').addEventListener('click', function() {
+      document.getElementById("logoutButton").addEventListener("click", function () {
         logout();
-        window.location.replace('../account/login.html');
+        window.location.replace("../account/login.html");
       });
 
-      document.getElementById('postForm').addEventListener('submit', function(event) {
+      document.getElementById("postForm").addEventListener("submit", function (event) {
         event.preventDefault();
-        const postTitle = document.getElementById('postTitle').value;
-        const postContent = document.getElementById('postContent').value;
+        const postTitle = document.getElementById("postTitle").value;
+        const postContent = document.getElementById("postContent").value;
         createPost(postTitle, postContent);
       });
 
       function createPost(title, content) {
         const post = { title, content, date: new Date() };
         savePost(post);
-        alert('Post created successfully!');
+        alert("Post created successfully!");
       }
 
       function savePost(post) {
         // Replace this with actual logic to save post data to your backend
-        const posts = JSON.parse(localStorage.getItem('posts')) || [];
+        const posts = JSON.parse(localStorage.getItem("posts")) || [];
         posts.push(post);
-        localStorage.setItem('posts', JSON.stringify(posts));
+        localStorage.setItem("posts", JSON.stringify(posts));
       }
     </script>
     <script
