@@ -1,5 +1,3 @@
-
-
 // fetch(`${apiBaseURL}/api/posts`, {
 //     headers: {
 //       Authorization: `Bearer ${loginData.token}`,

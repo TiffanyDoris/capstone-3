@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   logoutButton.addEventListener("click", function () {
     logout();
-      window.location.replace("../account/login.html");
+    window.location.replace("../account/login.html");
   });
 
   fetch(`${apiBaseURL}/api/posts`, {
@@ -32,9 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card-body">
               <h5 class="card-title">${post.username}</h5>
               <p class="card-text">${post.text}</p>
-              <p class="card-text"><small class="text-muted">${new Date(
-                post.createdAt
-              ).toLocaleString()}</small></p>
+              <p class="card-text"><small class="text-muted">${new Date(post.createdAt).toLocaleString()}</small></p>
             </div>
           </div>
         `;
